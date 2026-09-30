@@ -175,7 +175,7 @@ footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.9rem;borde
           <span class="ico">@</span>
           <span><span class="lab">Email</span><br><span class="val">paulagexposito@gmail.com</span></span>
         </a>
-        <a class="contact-row" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">
+        <a class="contact-row" href="https://www.linkedin.com/in/paula-garcia-exposito" target="_blank" rel="noopener">
           <span class="ico">in</span>
           <span><span class="lab">LinkedIn</span><br><span class="val">linkedin.com/in/paula-garcia-exposito</span></span>
         </a>
@@ -337,7 +337,7 @@ $("#contactForm").addEventListener("submit", (ev) => {
   const nombre = $("#cf-name").value, email = $("#cf-email").value, msg = $("#cf-msg").value;
   const asunto = encodeURIComponent("Contacto desde el portfolio — " + nombre);
   const cuerpo = encodeURIComponent(msg + "\n\n— " + nombre + " (" + email + ")");
-  window.location.href = "mailto:tu@email.com?subject=" + asunto + "&body=" + cuerpo;
+  window.location.href = "mailto:tu@paulagexposito@gmail.com?subject=" + asunto + "&body=" + cuerpo;
 });
 
 $("#year").textContent = new Date().getFullYear();
