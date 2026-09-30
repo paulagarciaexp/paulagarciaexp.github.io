@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu Nombre - Data Analyst | Portfolio</title>
+<meta name="description" content="Tu Nombre - Data Analyst especializado en Business Intelligence, Power BI, SQL y Python. Portfolio de proyectos.">
+<style>
+:root{--bg:#f6f8fd;--card:#fff;--ink:#0f172a;--muted:#5b6474;--brand:#3b6cf6;--brand-dark:#1e3a8a;--soft:#e4ecff;--line:#e2e8f0;--shadow:0 10px 30px rgba(30,58,138,.10)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1220;--card:#151c30;--ink:#eef2ff;--muted:#a3adc2;--brand:#6c93ff;--brand-dark:#b8ccff;--soft:#1f2b4d;--line:#27314d;--shadow:0 10px 30px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:2rem;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 28px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;height:56px}
+nav b{color:#A0138E}
+nav div a{margin-left:16px;text-decoration:none;color:var(--muted);font-size:.95rem}
+nav div a:hover{color:var(--brand)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;padding:72px 0}
+.pill{display:inline-block;background:var(--soft);color:var(--brand-dark);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:.9rem;font-weight:600}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.15;margin:18px 0;color:#A0138E}
+@media(prefers-color-scheme:dark){.hero h1,nav b{color:#e05ccc}}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:56ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:13px 30px;border-radius:999px;background:#DDA8D6;color:#111;text-decoration:none;font-weight:700;border:1px solid #DDA8D6;box-shadow:0 10px 22px -6px rgba(110,30,100,.40)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line);box-shadow:none}
+.btn:hover,.chip:hover{filter:brightness(1.08)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:1.15rem}
+.card ul{margin:0;padding-left:20px;color:var(--muted)}
+.card li{margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.85rem}
+.tag.plain{background:transparent}
+.meta{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-bottom:8px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 22px;font:inherit;font-weight:700;cursor:pointer}
+.chip[aria-pressed=true]{background:#DDA8D6;border-color:#DDA8D6;color:#111}
+.filters input{flex:1;min-width:220px;padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.proj{display:flex;flex-direction:column}
+.proj p{color:var(--muted);margin:4px 0 0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:18px}
+.links a{background:var(--soft);color:var(--brand-dark);border-radius:10px;padding:8px 16px;text-decoration:none;font-weight:600;font-size:.95rem}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.empty{color:var(--muted);display:none}
+footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.9rem;border-top:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+@media(max-width:800px){.hero,.about{grid-template-columns:1fr}nav div a{margin-left:10px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>Tu Nombre</b>
+  <div><a href="#stack">Stack</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a></div>
+</div></nav>
+
+<main class="wrap">
+
+<!-- ========== INICIO ========== -->
+<header class="hero">
+  <div>
+    <span class="pill">Data Analytics · BI · ETL</span>
+    <h1>Tu Nombre y Apellidos<br>Data Analyst</h1>
+    <p>Creo soluciones de analítica de datos centradas en negocio: dashboards de <b>Power BI</b>, consultas <b>SQL</b> y análisis con <b>Python</b>.</p>
+    <div class="btns">
+      <a class="btn" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="#stack">Stack</a>
+      <a class="btn ghost" href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <aside class="card">
+    <h3>Lo que verás aquí</h3>
+    <ul>
+      <li>Dashboards interactivos con KPIs accionables.</li>
+      <li>Procesos de limpieza y transformación de datos.</li>
+      <li>Consultas y modelos SQL.</li>
+      <li>Proyectos aplicados a (tu sector: retail, logística, finanzas...).</li>
+    </ul>
+  </aside>
+</header>
+
+<!-- ========== STACK ========== -->
+<section id="stack">
+  <h2>Stack de análisis y Business Intelligence</h2>
+  <p class="sub">Herramientas que utilizo para transformar datos en decisiones.</p>
+  <div class="grid" id="stackGrid"></div>
+</section>
+
+<!-- ========== PROYECTOS ========== -->
+<section id="proyectos">
+  <h2>Proyectos destacados</h2>
+  <p class="sub">Filtra por herramienta o busca por palabra clave.</p>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="projGrid"></div>
+  <p class="empty" id="empty">No hay proyectos que coincidan con la búsqueda.</p>
+</section>
+
+<!-- ========== SOBRE MÍ ========== -->
+<section id="sobre-mi">
+  <div class="about">
+    <div class="card">
+      <h2>Sobre mí</h2>
+      <p>Escribe aquí 2 o 3 frases: quién eres, qué has estudiado, en qué sectores has trabajado y qué te gusta hacer con los datos.</p>
+      <ul>
+        <li><b>Stack:</b> Power BI, SQL, Python, Excel.</li>
+        <li><b>Áreas:</b> (retail, logística, finanzas...).</li>
+        <li><b>Valor:</b> KPIs accionables y storytelling con datos.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Habilidades clave</h2>
+      <ul>
+        <li>Modelado dimensional (star schema) y medidas DAX.</li>
+        <li>Limpieza y transformación de datos (Power Query, Python).</li>
+        <li>SQL: joins, funciones de ventana, agregaciones.</li>
+        <li>Visualización y comunicación de resultados.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p class="sub">¿Quieres colaborar o ver un caso concreto? Escríbeme.</p>
+  <div class="btns">
+    <a class="btn ghost" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn ghost" href="mailto:tu@email.com">Email</a>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> Tu Nombre · Portfolio de Data Analytics</footer>
+
+<script>
+/* ==========================================================
+   AQUÍ EDITAS TU CONTENIDO. No hace falta tocar nada más.
+   Respeta las comillas "" y las comas al final de cada línea.
+   ========================================================== */
+
+// 1) STACK: categorías y herramientas
+const stack = [
+  { cat: "Lenguajes", titulo: "Programación y consulta", texto: "Base para automatizar procesos y construir análisis.", items: ["Python", "SQL", "R"] },
+  { cat: "Librerías", titulo: "Análisis y manipulación", texto: "Toolbox para limpiar, transformar y analizar datos.", items: ["Pandas", "NumPy", "matplotlib", "seaborn"] },
+  { cat: "BI", titulo: "Business Intelligence y modelado", texto: "Modelado dimensional, DAX y cuadros de mando.", items: ["Power BI", "DAX", "Power Query (M)", "Modelado dimensional"] },
+  { cat: "ETL & Data", titulo: "ETL y bases de datos", texto: "Ingesta, limpieza y preparación de datos.", items: ["MySQL", "PostgreSQL", "SQL Server", "Excel"] },
+  { cat: "Herramientas", titulo: "Desarrollo y ecosistema", texto: "Control de versiones y despliegue del portfolio.", items: ["Git", "GitHub", "GitHub Pages", "VS Code"] }
+];
+
+// 2) PROYECTOS: copia y pega un bloque { ... }, para añadir más.
+//    Deja "" en un enlace si no lo tienes y el botón no se mostrará.
+const proyectos = [
+  {
+    categoria: "Dashboard · BI", anio: "2025",
+    titulo: "Dashboard de ventas y KPIs",
+    descripcion: "Describe en 2 o 3 frases el problema de negocio, los datos que usaste y qué conclusiones sacaste.",
+    etiquetas: ["Power BI", "SQL", "ETL"],
+    enlaces: [{ texto: "Repositorio", url: "" }, { texto: "Dashboard", url: "" }]
+  },
+  {
+    categoria: "EDA · Python", anio: "2025",
+    titulo: "Análisis exploratorio y segmentación de clientes",
+    descripcion: "Análisis con Python y un dataset público. Explica qué preguntas respondiste y qué técnica aplicaste.",
+    etiquetas: ["Python", "Pandas", "EDA"],
+    enlaces: [{ texto: "Repositorio", url: "" }, { texto: "Informe", url: "" }]
+  },
+  {
+    categoria: "SQL", anio: "2024",
+    titulo: "Consultas SQL sobre base de datos de ventas",
+    descripcion: "Consultas con joins y funciones de ventana para responder preguntas de negocio.",
+    etiquetas: ["SQL", "MySQL"],
+    enlaces: [{ texto: "Repositorio", url: "" }]
+  }
+];
+
+// 3) FILTROS: botones que aparecen sobre los proyectos
+const filtros = ["Todos", "Power BI", "SQL", "Python", "ETL"];
+
+/* ============ A partir de aquí no hace falta editar ============ */
+const $ = (s) => document.querySelector(s);
+const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h) e.textContent = h; return e; };
+
+stack.forEach(s => {
+  const c = el("article", "card");
+  c.append(el("span", "tag plain", s.cat), el("h3", "", s.titulo), el("p", "sub", s.texto));
+  const t = el("div", "tags"); s.items.forEach(i => t.append(el("span", "tag", i))); c.append(t);
+  $("#stackGrid").append(c);
+});
+
+let filtroActivo = "Todos";
+filtros.forEach(f => {
+  const b = el("button", "chip", f);
+  b.type = "button"; b.setAttribute("aria-pressed", f === "Todos");
+  b.onclick = () => { filtroActivo = f; document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); pintar(); };
+  $("#filters").append(b);
+});
+const buscador = el("input"); buscador.type = "search"; buscador.placeholder = "Buscar: cohortes, KPI, dataset...";
+buscador.setAttribute("aria-label", "Buscar proyectos"); buscador.oninput = pintar; $("#filters").append(buscador);
+
+function pintar() {
+  const q = buscador.value.toLowerCase().trim(), g = $("#projGrid"); g.innerHTML = "";
+  const lista = proyectos.filter(p => {
+    const texto = [p.titulo, p.descripcion, p.categoria, ...p.etiquetas].join(" ").toLowerCase();
+    return (filtroActivo === "Todos" || p.etiquetas.includes(filtroActivo)) && texto.includes(q);
+  });
+  lista.forEach(p => {
+    const c = el("article", "card proj"), m = el("div", "meta");
+    m.append(el("span", "", p.categoria), el("span", "", p.anio));
+    c.append(m, el("h3", "", p.titulo), el("p", "", p.descripcion));
+    const t = el("div", "tags"); p.etiquetas.forEach(e => t.append(el("span", "tag", e))); c.append(t);
+    const l = el("div", "links");
+    p.enlaces.filter(x => x.url).forEach(x => { const a = el("a", "", x.texto); a.href = x.url; a.target = "_blank"; a.rel = "noopener"; l.append(a); });
+    if (l.children.length) c.append(l);
+    g.append(c);
+  });
+  $("#empty").style.display = lista.length ? "none" : "block";
+}
+pintar();
+$("#year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
