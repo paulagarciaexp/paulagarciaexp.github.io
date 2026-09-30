@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu Nombre - Data Analyst & BI Specialist</title>
+<meta name="description" content="Tu Nombre - Data Analyst especializado en Business Intelligence, Power BI, SQL y Python. Portfolio de proyectos, experiencia y formación.">
+<style>
+:root{--bg:#f6f8fd;--card:#fff;--ink:#0f172a;--muted:#5b6474;--brand:#A0138E;--soft:#DDA8D6;--soft2:#f5e7f2;--line:#e2e8f0;--shadow:0 10px 30px rgba(30,58,138,.10)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1220;--card:#151c30;--ink:#eef2ff;--muted:#a3adc2;--brand:#e05ccc;--soft:#7a3f74;--soft2:#241a26;--line:#27314d;--shadow:0 10px 30px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:60px 0}
+h2{font-size:2rem;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;height:56px}
+nav b{color:var(--brand)}
+nav div a{margin-left:14px;text-decoration:none;color:var(--muted);font-size:.92rem;white-space:nowrap}
+nav div a:hover{color:var(--brand)}
+
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;padding:72px 0}
+.pill{display:inline-block;background:var(--soft2);color:var(--brand);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:.9rem;font-weight:600}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.15;margin:18px 0;color:var(--brand)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:56ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;background:var(--soft);color:#111;text-decoration:none;font-weight:700;border:1px solid var(--soft);box-shadow:0 10px 22px -6px rgba(160,19,142,.35)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line);box-shadow:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:1.15rem}
+.card ul{margin:0;padding-left:20px;color:var(--muted)}
+.card li{margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{background:var(--soft2);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.85rem}
+.tag.plain{background:transparent}
+.meta{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-bottom:8px}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 18px;font:inherit;font-weight:600;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--soft);border-color:var(--soft);color:#111}
+.filters input{flex:1;min-width:220px;padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.proj{display:flex;flex-direction:column}
+.proj p{color:var(--muted);margin:4px 0 0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:18px}
+.links a{background:var(--soft2);color:var(--brand);border-radius:10px;padding:8px 16px;text-decoration:none;font-weight:600;font-size:.95rem}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.empty{color:var(--muted);display:none}
+
+/* EXPERIENCIA / FORMACIÓN: tarjetas tipo línea de tiempo */
+.timeline{display:flex;flex-direction:column;gap:18px}
+.tl-card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow)}
+.tl-card .when{display:inline-block;color:var(--brand);background:var(--soft2);border-radius:999px;padding:3px 12px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px}
+.tl-card h3{margin:0 0 2px;font-size:1.15rem}
+.tl-card .org{color:var(--muted);font-weight:600;font-size:.95rem;margin-bottom:10px}
+.tl-card p{color:var(--muted);margin:0}
+.tl-card .tags{margin-top:12px}
+
+/* CONTACTO */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-info{display:flex;flex-direction:column;gap:14px}
+.contact-row{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink)}
+.contact-row .ico{width:38px;height:38px;border-radius:50%;background:var(--soft2);color:var(--brand);display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.contact-row .lab{font-size:.8rem;color:var(--muted)}
+.contact-row .val{font-weight:600}
+.badge-status{display:inline-flex;align-items:center;gap:8px;background:var(--soft2);color:var(--brand);border-radius:999px;padding:6px 14px;font-size:.85rem;font-weight:600;margin-bottom:16px}
+.badge-status .dot{width:8px;height:8px;border-radius:50%;background:#22c55e}
+.form-field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.form-field label{font-size:.9rem;font-weight:600}
+.form-field input,.form-field textarea{padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;resize:vertical}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:10px}
+
+footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.9rem;border-top:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+@media(max-width:800px){.hero,.about,.contact-wrap{grid-template-columns:1fr}nav div a{margin-left:8px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <b>Tu Nombre</b>
+  <div><a href="#stack">Stack</a><a href="#proyectos">Proyectos</a><a href="#experiencia">Experiencia</a><a href="#formacion">Formación</a><a href="#contacto">Contacto</a></div>
+</div></nav>
+
+<main class="wrap">
+
+<!-- ========== INICIO ========== -->
+<header class="hero">
+  <div>
+    <span class="pill">Data Analytics · BI · ETL</span>
+    <h1>Tu Nombre y Apellidos<br>Data Analyst</h1>
+    <p>Creo soluciones de analítica de datos centradas en negocio: dashboards de <b>Power BI</b>, consultas <b>SQL</b> y análisis con <b>Python</b>.</p>
+    <div class="btns">
+      <a class="btn" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="#stack">Stack</a>
+      <a class="btn ghost" href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <aside class="card">
+    <h3>Lo que verás aquí</h3>
+    <ul>
+      <li>Dashboards interactivos con KPIs accionables.</li>
+      <li>Procesos de limpieza y transformación de datos.</li>
+      <li>Consultas y modelos SQL.</li>
+      <li>Proyectos aplicados a (tu sector: retail, logística, finanzas...).</li>
+    </ul>
+  </aside>
+</header>
+
+<!-- ========== STACK ========== -->
+<section id="stack">
+  <h2>Stack de análisis y Business Intelligence</h2>
+  <p class="sub">Herramientas que utilizo para transformar datos en decisiones.</p>
+  <div class="grid" id="stackGrid"></div>
+</section>
+
+<!-- ========== PROYECTOS ========== -->
+<section id="proyectos">
+  <h2>Proyectos destacados</h2>
+  <p class="sub">Filtra por herramienta o busca por palabra clave.</p>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="projGrid"></div>
+  <p class="empty" id="empty">No hay proyectos que coincidan con la búsqueda.</p>
+</section>
+
+<!-- ========== EXPERIENCIA ========== -->
+<section id="experiencia">
+  <h2>Experiencia</h2>
+  <p class="sub">Mi trayectoria profesional en analítica de datos y Business Intelligence.</p>
+  <div class="timeline" id="expTimeline"></div>
+</section>
+
+<!-- ========== FORMACIÓN ========== -->
+<section id="formacion">
+  <h2>Formación</h2>
+  <p class="sub">Estudios y cursos que sustentan mi perfil técnico.</p>
+  <div class="timeline" id="eduTimeline"></div>
+</section>
+
+<!-- ========== SOBRE MÍ ========== -->
+<section id="sobre-mi">
+  <div class="about">
+    <div class="card">
+      <h2>Sobre mí</h2>
+      <p>Escribe aquí 2 o 3 frases: quién eres, qué has estudiado, en qué sectores has trabajado y qué te gusta hacer con los datos.</p>
+      <ul>
+        <li><b>Stack:</b> Power BI, SQL, Python, Excel.</li>
+        <li><b>Áreas:</b> (retail, logística, finanzas...).</li>
+        <li><b>Valor:</b> KPIs accionables y storytelling con datos.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Habilidades clave</h2>
+      <ul>
+        <li>Modelado dimensional (star schema) y medidas DAX.</li>
+        <li>Limpieza y transformación de datos (Power Query, Python).</li>
+        <li>SQL: joins, funciones de ventana, agregaciones.</li>
+        <li>Visualización y comunicación de resultados.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p class="sub">¿Interesado en colaborar o ver un caso concreto? Escríbeme, respondo lo antes posible.</p>
+  <div class="contact-wrap">
+    <div>
+      <span class="badge-status"><span class="dot"></span> Disponible para nuevas oportunidades</span>
+      <div class="contact-info">
+        <a class="contact-row" href="mailto:tu@email.com">
+          <span class="ico">@</span>
+          <span><span class="lab">Email</span><br><span class="val">tu@email.com</span></span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">
+          <span class="ico">in</span>
+          <span><span class="lab">LinkedIn</span><br><span class="val">linkedin.com/in/TU-USUARIO</span></span>
+        </a>
+        <a class="contact-row" href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">
+          <span class="ico">GH</span>
+          <span><span class="lab">GitHub</span><br><span class="val">github.com/TU-USUARIO</span></span>
+        </a>
+        <div class="contact-row" style="cursor:default">
+          <span class="ico">📍</span>
+          <span><span class="lab">Ubicación</span><br><span class="val">Tu ciudad, País</span></span>
+        </div>
+      </div>
+    </div>
+    <form class="card" id="contactForm">
+      <div class="form-field"><label for="cf-name">Nombre</label><input id="cf-name" required></div>
+      <div class="form-field"><label for="cf-email">Tu email</label><input id="cf-email" type="email" required></div>
+      <div class="form-field"><label for="cf-msg">Mensaje</label><textarea id="cf-msg" rows="4" required></textarea></div>
+      <button class="btn" type="submit" style="border:none;cursor:pointer">Enviar mensaje</button>
+      <p class="form-note">Al enviar se abrirá tu programa de correo con el mensaje ya redactado, dirigido a tu@email.com.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> Tu Nombre · Portfolio de Data Analytics</footer>
+
+<script>
+/* ==========================================================
+   AQUÍ EDITAS TU CONTENIDO. No hace falta tocar nada más.
+   Respeta las comillas "" y las comas al final de cada línea.
+   ========================================================== */
+
+// 1) STACK
+const stack = [
+  { cat: "Lenguajes", titulo: "Programación y consulta", texto: "Base para automatizar procesos y construir análisis.", items: ["Python", "SQL", "R"] },
+  { cat: "Librerías", titulo: "Análisis y manipulación", texto: "Toolbox para limpiar, transformar y analizar datos.", items: ["Pandas", "NumPy", "matplotlib", "seaborn"] },
+  { cat: "BI", titulo: "Business Intelligence y modelado", texto: "Modelado dimensional, DAX y cuadros de mando.", items: ["Power BI", "DAX", "Power Query (M)", "Modelado dimensional"] },
+  { cat: "ETL & Data", titulo: "ETL y bases de datos", texto: "Ingesta, limpieza y preparación de datos.", items: ["MySQL", "PostgreSQL", "SQL Server", "Excel"] },
+  { cat: "Herramientas", titulo: "Desarrollo y ecosistema", texto: "Control de versiones y despliegue del portfolio.", items: ["Git", "GitHub", "GitHub Pages", "VS Code"] }
+];
+
+// 2) PROYECTOS
+const proyectos = [
+  {
+    categoria: "Dashboard · BI", anio: "2025",
+    titulo: "Dashboard de ventas y KPIs",
+    descripcion: "Describe en 2 o 3 frases el problema de negocio, los datos que usaste y qué conclusiones sacaste.",
+    etiquetas: ["Power BI", "SQL", "ETL"],
+    enlaces: [{ texto: "Repositorio", url: "" }, { texto: "Dashboard", url: "" }]
+  },
+  {
+    categoria: "EDA · Python", anio: "2025",
+    titulo: "Análisis exploratorio y segmentación de clientes",
+    descripcion: "Análisis con Python y un dataset público. Explica qué preguntas respondiste y qué técnica aplicaste.",
+    etiquetas: ["Python", "Pandas", "EDA"],
+    enlaces: [{ texto: "Repositorio", url: "" }, { texto: "Informe", url: "" }]
+  },
+  {
+    categoria: "SQL", anio: "2024",
+    titulo: "Consultas SQL sobre base de datos de ventas",
+    descripcion: "Consultas con joins y funciones de ventana para responder preguntas de negocio.",
+    etiquetas: ["SQL", "MySQL"],
+    enlaces: [{ texto: "Repositorio", url: "" }]
+  }
+];
+const filtros = ["Todos", "Power BI", "SQL", "Python", "ETL"];
+
+// 3) EXPERIENCIA: copia un bloque { ... } para añadir otro puesto
+const experiencia = [
+  {
+    cuando: "2024 — Actualidad",
+    puesto: "Data Analyst",
+    empresa: "Nombre de la empresa",
+    texto: "Describe tus responsabilidades principales: qué dashboards mantienes, qué decisiones ayudas a tomar y algún logro medible (ej. redujo el tiempo de reporting en un 30%).",
+    etiquetas: ["Power BI", "SQL"]
+  },
+  {
+    cuando: "2022 — 2024",
+    puesto: "Analista de datos junior",
+    empresa: "Nombre de la empresa",
+    texto: "Describe tus tareas: limpieza de datos, automatización de informes, soporte a otros equipos, etc.",
+    etiquetas: ["Excel", "ETL"]
+  }
+];
+
+// 4) FORMACIÓN: copia un bloque { ... } para añadir otro título o curso
+const formacion = [
+  {
+    cuando: "2023 — 2024",
+    titulo: "Máster / Curso en Business Intelligence",
+    centro: "Nombre del centro",
+    texto: "Breve descripción de lo aprendido o del trabajo final realizado."
+  },
+  {
+    cuando: "2019 — 2023",
+    titulo: "Grado universitario",
+    centro: "Nombre de la universidad",
+    texto: "Breve descripción de la formación recibida."
+  }
+];
+
+/* ============ A partir de aquí no hace falta editar ============ */
+const $ = (s) => document.querySelector(s);
+const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h) e.textContent = h; return e; };
+
+stack.forEach(s => {
+  const c = el("article", "card");
+  c.append(el("span", "tag plain", s.cat), el("h3", "", s.titulo), el("p", "sub", s.texto));
+  const t = el("div", "tags"); s.items.forEach(i => t.append(el("span", "tag", i))); c.append(t);
+  $("#stackGrid").append(c);
+});
+
+let filtroActivo = "Todos";
+filtros.forEach(f => {
+  const b = el("button", "chip", f);
+  b.type = "button"; b.setAttribute("aria-pressed", f === "Todos");
+  b.onclick = () => { filtroActivo = f; document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); pintarProyectos(); };
+  $("#filters").append(b);
+});
+const buscador = el("input"); buscador.type = "search"; buscador.placeholder = "Buscar: cohortes, KPI, dataset...";
+buscador.setAttribute("aria-label", "Buscar proyectos"); buscador.oninput = pintarProyectos; $("#filters").append(buscador);
+
+function pintarProyectos() {
+  const q = buscador.value.toLowerCase().trim(), g = $("#projGrid"); g.innerHTML = "";
+  const lista = proyectos.filter(p => {
+    const texto = [p.titulo, p.descripcion, p.categoria, ...p.etiquetas].join(" ").toLowerCase();
+    return (filtroActivo === "Todos" || p.etiquetas.includes(filtroActivo)) && texto.includes(q);
+  });
+  lista.forEach(p => {
+    const c = el("article", "card proj"), m = el("div", "meta");
+    m.append(el("span", "", p.categoria), el("span", "", p.anio));
+    c.append(m, el("h3", "", p.titulo), el("p", "", p.descripcion));
+    const t = el("div", "tags"); p.etiquetas.forEach(e => t.append(el("span", "tag", e))); c.append(t);
+    const l = el("div", "links");
+    p.enlaces.filter(x => x.url).forEach(x => { const a = el("a", "", x.texto); a.href = x.url; a.target = "_blank"; a.rel = "noopener"; l.append(a); });
+    if (l.children.length) c.append(l);
+    g.append(c);
+  });
+  $("#empty").style.display = lista.length ? "none" : "block";
+}
+pintarProyectos();
+
+experiencia.forEach(e => {
+  const c = el("article", "tl-card");
+  c.append(el("span", "when", e.cuando), el("h3", "", e.puesto), el("div", "org", e.empresa), el("p", "", e.texto));
+  if (e.etiquetas && e.etiquetas.length) {
+    const t = el("div", "tags"); e.etiquetas.forEach(x => t.append(el("span", "tag", x))); c.append(t);
+  }
+  $("#expTimeline").append(c);
+});
+
+formacion.forEach(f => {
+  const c = el("article", "tl-card");
+  c.append(el("span", "when", f.cuando), el("h3", "", f.titulo), el("div", "org", f.centro), el("p", "", f.texto));
+  $("#eduTimeline").append(c);
+});
+
+$("#contactForm").addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  const nombre = $("#cf-name").value, email = $("#cf-email").value, msg = $("#cf-msg").value;
+  const asunto = encodeURIComponent("Contacto desde el portfolio — " + nombre);
+  const cuerpo = encodeURIComponent(msg + "\n\n— " + nombre + " (" + email + ")");
+  window.location.href = "mailto:tu@email.com?subject=" + asunto + "&body=" + cuerpo;
+});
+
+$("#year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
